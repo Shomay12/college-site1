@@ -4,29 +4,29 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. LEADERSHIP DATA
     const leadershipData = [
-        { 
+        {
             id: 1,
-            name: "Prof.(Dr) Rekha Agarwal", 
-            role: "Director, AIIT", 
+            name: "Prof.(Dr) Rekha Agarwal",
+            role: "Director, AIIT",
             image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
             bio: "A visionary academician with over 25 years of experience in technical education and research. Under her leadership, AIIT has achieved significant milestones in institutional growth and research excellence.",
             achievements: ["PhD in Computer Science", "Senior IEEE Member", "Institutional Excellence Award 2024"]
         },
-        { 
+        {
             id: 2,
-            name: "Prof.(Dr.) Laxmi Ahuja", 
-            role: "Chief Coordinator", 
+            name: "Prof.(Dr.) Laxmi Ahuja",
+            role: "Chief Coordinator",
             image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
             bio: "Strategic coordinator focusing on student affairs and academic rigor. She manages the institutional fests and ensures seamless coordination between various technical clubs.",
             achievements: ["Award for Academic Leadership", "Author of 50+ Research Papers"]
         },
-        { 
+        {
             id: 3,
-            name: "Mr. Priyaank Sinha", 
-            role: "Student Chief Coordinator", 
+            name: "Mr. Priyaank Sinha",
+            role: "Student Chief Coordinator",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
             bio: "An innovative student leader bridging the gap between student aspirations and institutional goals. He orchestrates the student body for major technical summits.",
             achievements: ["Presidential Citation for Leadership", "Top 1% Student Rank"]
@@ -102,13 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderLeadership() {
         const leadershipContainer = document.getElementById('leadershipPodium');
         if (!leadershipContainer) return;
-        
+
         // 5-Slot Hierarchy (Side, Mid, Top, Mid, Side)
         const podiumOrder = [
-            { ...placeholderLeaders[0], type: 'podium-side' }, 
-            { ...leadershipData[1], type: 'podium-mid' }, 
-            { ...leadershipData[0], type: 'podium-top' }, 
-            { ...leadershipData[2], type: 'podium-mid' }, 
+            { ...placeholderLeaders[0], type: 'podium-side' },
+            { ...leadershipData[1], type: 'podium-mid' },
+            { ...leadershipData[0], type: 'podium-top' },
+            { ...leadershipData[2], type: 'podium-mid' },
             { ...placeholderLeaders[1], type: 'podium-side' }
         ];
 
@@ -187,10 +187,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     };
 
-    const closeModalFunc = () => {
+    // Close modal function
+    const closeModal = () => {
         document.getElementById('clubModal').style.display = 'none';
         document.body.style.overflow = 'auto';
     };
+    window.closeModal = closeModal;
+
+    // Wire close button
+    const closeBtn = document.getElementById('closeModal');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    document.getElementById('clubModal').addEventListener('click', (e) => {
+        if (e.target.id === 'clubModal') window.closeModal();
+    });
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.closeModal();
+    });
 
     // 4. NAVBAR SCROLL EFFECT
     const navbar = document.querySelector('.navbar');
@@ -209,11 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
-            
+
             btn.textContent = 'Query Sent Successfully!';
             btn.style.background = '#28a745'; // Success Green
             btn.disabled = true;
-            
+
             setTimeout(() => {
                 contactForm.reset();
                 btn.textContent = originalText;
