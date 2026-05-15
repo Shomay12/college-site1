@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Commite | Academic Excellence</title>
+
+    <!-- STABLE STYLES (V6.1) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- 1. NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                CLUB<span>COMMITE</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#clubs">Clubs Showcase</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#clubs" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.75rem;">Join
+                    Initiative</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- 2. HERO -->
+        <section class="hero">
+            <!-- AMITY TORCH WATERMARK -->
+            <img src="torch-clean.png" class="hero-watermark" alt="">
+
+            <div class="container reveal">
+                <span class="section-label">Institutional Resource</span>
+                <h1>Excellence In <span>Student Leadership</span></h1>
+                <p>Welcome to the official digital hub of the Amity Institute of Information Technology. A professional
+                    ecosystem for technical mastery and academic innovation.</p>
+                <div class="hero-actions">
+                    <a href="#clubs" class="btn btn-primary">Discover Societies</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. STATISTICS -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <span class="stat-val">3</span>
+                        <span class="stat-label">Core Clubs</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-val">1200+</span>
+                        <span class="stat-label">Active Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-val">20+</span>
+                        <span class="stat-label">Faculty Mentors</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-val">2026</span>
+                        <span class="stat-label">Academic Year</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ABOUT -->
+        <section class="section-padding" id="about">
+            <div class="container reveal">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div>
+                        <span class="section-label" style="color: var(--brand-blue);">Institutional Vision</span>
+                        <h2 style="margin-bottom: 2rem;">Cultivating The <br>Digital Leaders Of Tomorrow</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+                            The AIIT student ecosystem is designed to bridge academic knowledge with industry-ready
+                            skills through world-class professional societies.</p>
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <p style="font-weight: 700; color: var(--brand-blue);"><i class="fas fa-check-circle"
+                                    style="color: var(--brand-gold); margin-right: 10px;"></i> Verified Technical
+                                Societies</p>
+                            <p style="font-weight: 700; color: var(--brand-blue);"><i class="fas fa-check-circle"
+                                    style="color: var(--brand-gold); margin-right: 10px;"></i> National Technical
+                                Summits</p>
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--brand-blue); padding: 4rem; border-radius: var(--radius); border-right: 10px solid var(--brand-gold); color: white;">
+                        <h3 style="color: var(--brand-gold); margin-bottom: 1.5rem;">The Mission</h3>
+                        <p style="opacity: 0.8; line-height: 1.8;">To provide state-of-the-art infrastructure for
+                            research-driven learning and holistic student development through elite society memberships.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LEADERSHIP (MOVED ABOVE CLUBS) -->
+        <section class="leadership-section section-padding" id="leadership">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-label">Academic Coordination</span>
+                    <h2 style="color: white;">Institutional Leadership</h2>
+                    <p style="color: rgba(255,255,255,0.7);">Guided by brilliance and academic excellence.</p>
+                </div>
+                <div id="leadershipPodium" class="leadership-podium reveal">
+                    <!-- Leadership Podiums (5 Slots: Side, Mid, Top, Mid, Side) -->
+                </div>
+
+                <div id="leadershipDetailPane" class="reveal">
+                    <!-- Dynamic Details appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CLUBS SHOWCASE (MOVED BELOW LEADERSHIP) -->
+        <section class="section-padding" id="clubs" style="background: var(--brand-gray);">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-label">Showcase</span>
+                    <h2>Core Societies</h2>
+                    <p>Filter through our primary technical and management organizations.</p>
+                </div>
+
+                <div id="clubsGrid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; justify-content: center;"
+                    class="reveal">
+                    <!-- Dynamic rendering (Only 3 Clubs) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT -->
+        <section class="section-padding" id="contact">
+            <div class="container reveal">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 6rem; align-items: center;">
+                    <div>
+                        <span class="section-label" style="color: var(--brand-blue);">Collaboration</span>
+                        <h2 style="margin-bottom: 2rem;">Get In <span>Touch</span></h2>
+                        <p style="margin-bottom: 3rem; color: var(--text-muted); line-height: 1.8;">Reach out to the
+                            AIIT Student Affairs office for society registration, academic collaborations, or official
+                            technical event hosting inquiries.</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="contact-info-card">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5
+                                        style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-blue); letter-spacing: 1px;">
+                                        Office Location</h5>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">Sector
+                                        125, Noida, UP, 201313</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-card">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5
+                                        style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-blue); letter-spacing: 1px;">
+                                        Official Email</h5>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">
+                                        clubs@aiit.amity.edu</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-card">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h5
+                                        style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-blue); letter-spacing: 1px;">
+                                        Office Hours</h5>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">Mon -
+                                        Fri: 09:00 AM - 05:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--white); padding: 4rem; border-radius: var(--radius); border: 1px solid #E2E8F0; box-shadow: var(--shadow);">
+                        <form id="contactForm">
+                            <div style="margin-bottom: 2rem;">
+                                <label
+                                    style="display: block; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--brand-blue);">Your
+                                    Full Name</label>
+                                <input type="text" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid #E2E8F0; border-radius: 4px; background: var(--brand-gray);"
+                                    placeholder="John Doe">
+                            </div>
+                            <div style="margin-bottom: 2rem;">
+                                <label
+                                    style="display: block; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--brand-blue);">Institutional
+                                    Email</label>
+                                <input type="email" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid #E2E8F0; border-radius: 4px; background: var(--brand-gray);"
+                                    placeholder="example@amity.edu">
+                            </div>
+                            <div style="margin-bottom: 2rem;">
+                                <label
+                                    style="display: block; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--brand-blue);">Inquiry
+                                    Subject</label>
+                                <select
+                                    style="width: 100%; padding: 1rem; border: 1px solid #E2E8F0; border-radius: 4px; background: var(--brand-gray); font-family: inherit;">
+                                    <option>Club Registration</option>
+                                    <option>Technical Summit Query</option>
+                                    <option>Leadership Collaboration</option>
+                                    <option>Institutional Feedback</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 2.5rem;">
+                                <label
+                                    style="display: block; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.75rem; text-transform: uppercase; color: var(--brand-blue);">Message
+                                    / Query</label>
+                                <textarea required rows="4"
+                                    style="width: 100%; padding: 1rem; border: 1px solid #E2E8F0; border-radius: 4px; background: var(--brand-gray); resize: none; font-family: inherit;"
+                                    placeholder="Please detail your query here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send
+                                Official Query</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FULL WIDTH MAP SECTION -->
+                <div class="reveal"
+                    style="margin-top: 5rem; border-radius: var(--radius); overflow: hidden; border: 1px solid #E2E8F0; box-shadow: var(--shadow); height: 400px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.2681531604!2d77.3308358763025!3d28.532023988647572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c0b403e!2sAmity%20University%20Noida!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 6rem;">
+                <div>
+                    <h4>Amity Institute of IT</h4>
+                    <p style="opacity: 0.6; line-height: 1.8;">Preserving academic excellence and fostering student
+                        innovation since 2014.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul
+                        style="list-style: none; display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        <li>Registration Guidelines</li>
+                        <li>Club Policy Manual</li>
+                        <li>Academic Portal</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Stay Connected</h4>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="#" style="color: var(--brand-gold);"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" style="color: var(--brand-gold);"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" style="color: var(--brand-gold);"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <b>Club Commite</b>. All rights reserved.</p>
+                <p>Designed for <b>Institutional Excellence</b>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Club Modal -->
+    <div class="modal-overlay" id="clubModal">
+        <div class="modal-content">
+            <span id="closeModal"
+                style="position: absolute; top: 1.5rem; right: 2rem; cursor: pointer; font-size: 2.5rem; color: var(--brand-gold); z-index: 100;">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Logic Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
